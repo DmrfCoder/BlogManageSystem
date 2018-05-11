@@ -19,24 +19,27 @@ public class MainController {
         return "admin/login";
     }
 
-    @RequestMapping(value = "/admin/manager/loginP", method = RequestMethod.POST)
-    public String addUserPost(@ModelAttribute("manager") ManagerEntity managerEntity) {
-        // 注意此处，post请求传递过来的是一个UserEntity对象，里面包含了该用户的信息
-        // 通过@ModelAttribute()注解可以获取传递过来的'user'，并创建这个对象
+    @RequestMapping(value = "/admin/manager/signupP", method = RequestMethod.POST)
+    public String addManagerPost(@ModelAttribute("manager") ManagerEntity managerEntity) {
+        // 注意此处，post请求传递过来的是一个ManagerEntity对象，里面包含了该用户的信息
+        // 通过@ModelAttribute()注解可以获取传递过来的'manager'，并创建这个对象
 
         // 数据库中添加一个用户，该步暂时不会刷新缓存
-        //userRepository.save(userEntity);
+//        userRepository.save(userEntity);
+        System.out.println(managerEntity.getNickname());
+        System.out.println(managerEntity.getPassword());
+        // 存库
+        managerRepository.saveAndFlush(managerEntity);
 
 
-
-        // 重定向到用户管理页面，方法为 redirect:url
-        return "admin/users";
+        // 重定向到首页
+        return "admin/blogs";
     }
 
-    @RequestMapping(value = "/admin/main/signupP", method = RequestMethod.POST)
+    @RequestMapping(value = "/admin/signup", method = RequestMethod.GET)
     public String SignUp() {
         System.out.println("signup");
-        return "admin/users";
+        return "admin/signup";
     }
 
 }
