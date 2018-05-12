@@ -20,4 +20,6 @@ public interface ManagerRepository extends JpaRepository<ManagerEntity, Integer>
     // @Param注解用于提取参数
     @Query("update ManagerEntity  us set us.nickname=:qNickname,  us.password=:qPassword where us.id=:qId")
     public void updateManager(@Param("qNickname") String nickname, @Param("qPassword") String password, @Param("qId") Integer id);
+    @Query("SELECT mg FROM ManagerEntity mg WHERE mg.nickname=:qNickname AND mg.password=:qPassword")
+    public ManagerEntity queryManager(@Param("qNickname") String nickname, @Param("qPassword") String password);
 }

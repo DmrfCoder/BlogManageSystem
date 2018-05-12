@@ -43,10 +43,15 @@ public class MainController {
     }
 
     @RequestMapping(value = "/admin/loginP", method = RequestMethod.POST)
-    public String LogIn(@ModelAttribute("manager") ManagerEntity managerEntity) {
+    public String Login(@ModelAttribute("manager") ManagerEntity managerEntity) {
         System.out.println(managerEntity.getNickname());
         System.out.println(managerEntity.getPassword());
-        return "admin/login";
+
+        // 找到userId所表示的用户
+        ManagerEntity managerEntity1 = managerRepository.queryManager(managerEntity.getNickname(), managerEntity.getPassword());
+
+        if(managerEntity1 == null) {return "error";}
+        return "admin/blogs";
     }
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String hello(){

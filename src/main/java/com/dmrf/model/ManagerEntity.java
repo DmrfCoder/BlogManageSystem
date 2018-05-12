@@ -3,6 +3,7 @@ package com.dmrf.model;
 import javax.persistence.*;
 import java.util.Objects;
 
+//@NamedQuery(name = "ManagerEntity.queryManager", query = "SELECT mg FROM ManagerEntity mg WHERE mg.nickname AND mg.password")
 @Entity
 @Table(name = "manager", schema = "springdemo", catalog = "")
 public class ManagerEntity {
