@@ -29,7 +29,7 @@
                     <div class="col-md-5"><h2>注册</h2></div>
                     <div class="col-md-5"></div>
                     <div class="col-md-2"><br>
-                        <a  href="/admin/loginP" type="button" class="button button-primary button-circle" >LogIn</a>
+                        <a  href="/" type="button" class="button button-primary button-circle" >LogIn</a>
                     </div>
                 </div>
             </div>

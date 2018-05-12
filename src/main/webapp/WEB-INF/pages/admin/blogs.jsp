@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>SpringMVC 博客管理</title>
+    <title>BlogManageSystem BlogManage</title>
 
     <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -22,15 +22,15 @@
 </head>
 <body>
 <div class="container">
-    <h1>SpringMVC 博客系统-博客管理</h1>
+    <h1>BlogManageSystem BlogManage</h1>
     <hr/>
 
-    <h3>所有博客 <a href="/admin/blogs/add" type="button" class="btn btn-primary btn-sm">添加</a></h3>
+    <h3>所有博客   <a href="/admin/blogs/add" type="button" class="btn btn-primary btn-sm">添加</a>   <a href="/admin/users" type="button"  class="btn btn-primary btn-sm">查看所有用户</a></h3>
 
     <!-- 如果用户列表为空 -->
     <c:if test="${empty blogList}">
         <div class="alert alert-warning" role="alert">
-            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>Blog表为空，请<a href="/admin/blogs/add" type="button" class="btn btn-primary btn-sm">添加</a>
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>Blog表为空，请添加添加
         </div>
     </c:if>
 

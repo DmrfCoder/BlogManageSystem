@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>SpringMVC 添加用户</title>
+    <title>BlogManageSystem AddUser</title>
 
     <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -21,7 +21,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>SpringMVC 添加用户</h1>
+    <h1>BlogManageSystem AddUser</h1>
     <hr/>
     <form:form action="/admin/users/addP" method="post" commandName="user" role="form">
         <div class="form-group">
