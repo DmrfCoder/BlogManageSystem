@@ -21,7 +21,7 @@
 
 <body>
 <div class="container">
-    <form:form action="admin/signupP" class="form-signup">
+    <form:form action="/admin/manager/signupP" class="form-signup">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <div class="row">
@@ -34,7 +34,7 @@
             </div>
             <div class="panel-body">
                 <label for="username">用户名</label>
-                <input type="text" id="username" class="form-control" placeholder="Username" name="username" required autofocus>
+                <input type="text" id="username" class="form-control" placeholder="Username" name="nickname" required autofocus>
                 <br>
                 <label for="password">密码</label>
                 <input type="password" id="password" class="form-control" placeholder="Password" name="password" required>
