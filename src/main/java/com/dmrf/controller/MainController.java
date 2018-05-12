@@ -16,7 +16,7 @@ public class MainController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index() {
-        return "admin/login";
+        return "admin/signup";
     }
 
     @RequestMapping(value = "/admin/manager/signupP", method = RequestMethod.POST)
@@ -47,6 +47,10 @@ public class MainController {
         System.out.println(managerEntity.getNickname());
         System.out.println(managerEntity.getPassword());
         return "admin/login";
+    }
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    public String hello(){
+        return "hello";
     }
 
 }

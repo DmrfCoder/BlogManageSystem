@@ -12,7 +12,7 @@
 <head>
     <title>登录</title>
 </head>
-<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
 <link rel="stylesheet" href="css/user/user_normal.css">
 <link rel="stylesheet" href="css/button.css">
 <%

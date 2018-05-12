@@ -11,10 +11,11 @@
 <html lang="zh-CN">
 <head>
     <title>注册</title>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/user/user_normal.css">
+    <link rel="stylesheet" href="../css/button.css">
 </head>
-<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-<link rel="stylesheet" href="css/user/user_normal.css">
-<link rel="stylesheet" href="css/button.css">
+
 <%
 
 %>
