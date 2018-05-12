@@ -42,4 +42,16 @@ public class MainController {
         return "admin/signup";
     }
 
+    @RequestMapping(value = "/admin/loginP", method = RequestMethod.POST)
+    public String Login(@ModelAttribute("manager") ManagerEntity managerEntity) {
+        System.out.println(managerEntity.getNickname());
+        System.out.println(managerEntity.getPassword());
+
+        // 找到userId所表示的用户
+        ManagerEntity managerEntity1 = managerRepository.queryManager(managerEntity.getNickname(), managerEntity.getPassword());
+
+        if(managerEntity1 == null) {return "error";}
+        return "admin/blogs";
+    }
+
 }
