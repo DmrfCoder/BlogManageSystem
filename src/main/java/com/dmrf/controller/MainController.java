@@ -42,9 +42,10 @@ public class MainController {
         return "admin/signup";
     }
 
-    @RequestMapping(value = "/admin/loginP", method = RequestMethod.GET)
-    public String LogIn() {
-
+    @RequestMapping(value = "/admin/loginP", method = RequestMethod.POST)
+    public String LogIn(@ModelAttribute("manager") ManagerEntity managerEntity) {
+        System.out.println(managerEntity.getNickname());
+        System.out.println(managerEntity.getPassword());
         return "admin/login";
     }
 
