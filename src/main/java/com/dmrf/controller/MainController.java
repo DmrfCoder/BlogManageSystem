@@ -36,10 +36,16 @@ public class MainController {
         return "admin/blogs";
     }
 
-    @RequestMapping(value = "/admin/signup", method = RequestMethod.GET)
+    @RequestMapping(value = "/admin/signupP", method = RequestMethod.GET)
     public String SignUp() {
         System.out.println("signup");
         return "admin/signup";
+    }
+
+    @RequestMapping(value = "/admin/loginP", method = RequestMethod.GET)
+    public String LogIn() {
+
+        return "admin/login";
     }
 
 }
